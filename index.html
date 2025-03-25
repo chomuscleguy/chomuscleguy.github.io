@@ -1,46 +1,25 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub.io 블로그</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="sidebar">
-        <div class="profile-section">
-            <img src="https://raw.githubusercontent.com/chomuscleguy/chomuscleguy.github.io/4070f2998b681f55646a6878f83af617959b1aeb/asset/image/profile.jpg" 
-                 alt="Profile" class="profile-img">
-            <p class="profile-desc">간단한 프로필 설명</p>
-            <div class="social-links">
-                <a href="https://github.com/chomuscleguy" target="_blank">🔗</a>
-                <a href="mailto:your-email@example.com">✉️</a>
-            </div>
-        </div>
-        <div class="index-section">
-            <div class="index-title">INDEX</div>
-            <ul class="board-list" id="boardList">
-                <li onclick="showPosts('게시판 1')">게시판 1</li>
-                <li onclick="showPosts('게시판 2')">게시판 2</li>
-            </ul>
-        </div>
-        <div class="bottom-section">
-            <div class="blog-about">
-                <p><a href="#">Blog</a> | <a href="#">About</a></p>
-            </div>
-            <div class="visitor-counter">방문자 수: <span id="visitor-count">0</span></div>
-        </div>
-    </div>
-    <div class="content">
-        <h2 id="boardTitle">게시판을 선택하세요</h2>
-        <ul class="post-list" id="postList"></ul>
-        <div id="postContent"></div>
-    </div>
-    <div class="pagination">
-        <button id="prevPage">◀</button>
-        <span id="pageNumber">1</span>
-        <button id="nextPage">▶</button>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+---
+layout: default
+---
+{% include hero.html %}
+
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			{% if site.posts.size > 0 %}
+				<h4 class="lates-title">Latest Posts</h4>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	{% if site.posts.size > 0 %}
+		{% for post in paginator.posts %}
+			{% include article-content.html %}
+		{% endfor %}
+	{% endif %}
+	</div>
+</div>
+{% include pagination.html %}
