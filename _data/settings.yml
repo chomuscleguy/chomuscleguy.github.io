@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 title: Github.io
-logo: github_page.svg # You can add own logo.
+logo: logo.svg # You can add own logo.
 description: chomuscleguy의 github.io
 
 
@@ -10,9 +10,8 @@ description: chomuscleguy의 github.io
 author:
   name: Robert Cho
   image: profile.jpg
-  say-hello: 蝶野雛</strong>
-  bio: Designs, talks, and writes about <strong>web</strong>, <strong>ethics</strong>, <strong>privacy</strong>, and dev. I share design tutorials, free resources and inspiration. Loves <a href="#">music</a> & riding his bicycle.
-
+  say-hello: Unity Dev, Chomuscleguy</strong>
+  bio: write about <strong>programming languages(C#, C/C++)</strong> and <strong>Unity engine</strong>. I plan to upload demo versions of games 
 
 #-------------------------------
 # Contact links
