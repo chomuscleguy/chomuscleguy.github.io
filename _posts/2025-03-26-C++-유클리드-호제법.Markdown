@@ -1,46 +1,44 @@
 ---
 layout: post
-title:  "C++ 유클리드 호제법"
-# image:  02.jpg
-tags:   C++
+title:  "유클리드 호제법"
+image:  C++.png
+tags:   C++ Algorithm
 
 ---
-
-### 개요
+### 개요 :
 유클리드 호제법이란 두 수의 최대공약수(GCD)를 구하는 하나의 알고리즘이다.
 고대 그리스 수학자 유클리드가 제시한 알고리즘으로, 두 수의 나누어떨어지는 관계를 반복적으로 활용하여 가장 큰 공약수를 빠르게 구할 수 있다.
-### 원리
+### 원리 :
 두 수 a와 b에 대해, a가 b로 나누어떨어지지 않으면, 그 나머지를 구하고, 그 나머지와 b로 최대공약수를 구하는 방식입니다. 이 과정을 반복해서 나머지가 0이 될 때까지 진행하면, 그때의 b가 a와 b의 최대 공약수입니다.
+### 사용 조건 :
+1. 두 수 a와 b가 주어져야 한다.
+2. a와 b가 정수여야 한다.
+3. 두 수 중 적어도 하나는 0이 아니어야 한다. (48과 0의 최대 공약수는 48, 18과 0의 최대 공약수는 18)
 
-### 알고리즘 과정
-1. 두 수 a와 b가 주어졌을 때, a를 b로 나눈 나머지 r을 구합니다.
-2. 만약 r = 0이면, b가 a와 b의 최대공약수입니다.
-3. r = 0이면, b와 r의 최대공약수를 구하기 위해 1단계로 돌아갑니다.
 
 ```cpp
 #include <iostream>
 
 using namespace std;
 
-int gcd(int a, int b) 
+int gcd(int a, int b)
 {
-    while (b != 0) 
-    {
-        int r = a % b;
-        a = b; 
-        b = r;
-    }
-    return a;
+	int r;
+	while (b != 0)
+	{
+		r = a % b;
+		a = b;
+		b = r;
+	}
+	return a;
 }
 
 int main()
 {
-    int a, b;
-    cout << "두 수를 입력하세요: ";
-    cin >> a >> b;
-
-    cout << "두 수의 최대공약수는: " << gcd(a, b) << endl;
-    return 0;
+	int a, b;
+	cin >> a >> b;
+	cout << gcd(a, b) << endl;
+	cout << (a * b) / gcd(a, b) << endl;
 }
 ```
 
@@ -50,7 +48,7 @@ int main()
   <a style="text-decoration: none; color: black; font-weight: bold;">
     문제 풀어보기 :
   </a>
-  <a href="https://www.acmicpc.net/problemset?sort=ac_desc&algo=26" target="_blank" style="display: inline-block; margin-left: 5px; text-decoration: none; font-size: 25px;">
+  <a href="https://www.acmicpc.net/problem/2609" target="_blank" style="display: inline-block; margin-left: 5px; text-decoration: none; font-size: 25px;">
     BeakJoon
   </a>
 </div>
