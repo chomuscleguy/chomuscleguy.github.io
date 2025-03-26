@@ -44,4 +44,13 @@ int main()
 }
 ```
 
-<a href="https://www.acmicpc.net/problemset?sort=ac_desc&algo=26"> <img src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" style="border-radius: 50%; width: 100px; height: 100px;"> 문제 링크 </a>
+
+<br>
+<div style="display: inline-flex; align-items: center; justify-content: center;">
+  <a style="text-decoration: none; color: black; font-weight: bold;">
+    문제 풀어보기 :
+  </a>
+  <a href="https://www.acmicpc.net/problemset?sort=ac_desc&algo=26" target="_blank" style="display: inline-block; margin-left: 5px; text-decoration: none; font-size: 25px;">
+    BeakJoon
+  </a>
+</div>
