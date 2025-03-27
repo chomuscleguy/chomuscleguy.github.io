@@ -10,7 +10,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll/tagging
-  - jekyll-mathjax
 
 paginate: 5
 paginate_path: "/page/:num"

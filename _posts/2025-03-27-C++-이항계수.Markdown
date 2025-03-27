@@ -3,13 +3,14 @@ layout: post
 title:  "이항 계수"
 image:  C++.png
 tags:   C++ Algorithm, DP
+use_math: true
 ---
 ### 개요 :
 이항 계수(Binomial Coefficient)란, 주어진 자연수 \( n \)과 \( k \)에 대해 “\( n \)개 중에서 \( k \)개를 고르는 방법의 수”를 나타내는 값입니다. 이는 보통 **조합**(Combination)으로 불리며, 수학적으로 다음과 같이 정의됩니다:
 
-\[
+$$
 C(n, k) = \frac{n!}{k!(n-k)!}
-\]
+$$
 
 여기서:
 - \( C(n, k) \)는 \( n \)개 중에서 \( k \)개를 선택하는 경우의 수입니다.
