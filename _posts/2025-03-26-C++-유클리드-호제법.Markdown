@@ -3,7 +3,6 @@ layout: post
 title:  "유클리드 호제법"
 image:  C++.png
 tags:   C++ Algorithm
-use_math: true	
 ---
 ### 개요 :
 유클리드 호제법이란 두 수의 최대공약수(GCD)를 구하는 하나의 알고리즘이다.
