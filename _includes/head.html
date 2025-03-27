@@ -13,11 +13,11 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <!-- Ionicons -->
   <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-  
-  <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
+  {% if page.use_math %}
+  {% include mathjax_support.html %}
+{% endif %}
+  
   <style>
   {% capture include_to_scssify %}
     {% include main.scss %}
