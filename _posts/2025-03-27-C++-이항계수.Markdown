@@ -2,7 +2,7 @@
 layout: post
 title:  "이항 계수"
 image:  C++.png
-tags:   C++ Algorithm, DP
+tags:   C++ Algorithm DP
 ---
 
 ### 개요 :
