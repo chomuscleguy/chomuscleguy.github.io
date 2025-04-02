@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "출력속도 비교"
+image:  C++.png
+tags:   C++ Algorithm outputSpeed
+---
+
+### 개요 :
+알고리즘 문제를 풀다 보면 시간 초과가 뜨는 경우가 종종 있다.  
+대규모로 입출력이 일어나면 아무리 알고리즘을 효율적으로 짜도 시간초과가 뜨게 된다.  
+그럴때를 위해, 출력방법에 따른 속도 비교를 해볼 것 이다.
+### C++출력 속도 순위 : 
+| 순위 | 출력 방법                                                         | 평균 (초) |
+|------|------------------------------------------------------------------|-----------|
+| 1    | ios_base::sync_with_stdio(false); cout << i << '\n';              | 0.827     |
+| 2    | ios_base::sync_with_stdio(false); cout.tie(NULL); cout << i << '\n'; | 0.8272    |
+| 3    | printf("%d\n",i);                                                | 0.8614    |
+| 5    | cout << i << '\n';                                               | 0.9229    |
+| 6    | s += to_string(i) + '\n';를 이용해 문자열 하나로 만든 다음, 마지막에 cout << s << '\n'; | 1.1507    |
+| 7    | cout << i << endl;                                               | 11.5322   |
+
+
+
+<br> 
+<div style="display: inline-flex; align-items: center; justify-content: center;"> <a style="text-decoration: none; color: black; font-weight: bold;"> 출력 속도 비교 : </a> <a href="https://www.acmicpc.net/blog/view/57" target="_blank" style="display: inline-block; margin-left: 5px; text-decoration: none; font-size: 25px;"> BeakJoon </a> </div> 
