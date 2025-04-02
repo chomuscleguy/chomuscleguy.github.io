@@ -10,16 +10,78 @@ tags:   C++ Algorithm outputSpeed
 대규모로 입출력이 일어나면 아무리 알고리즘을 효율적으로 짜도 시간초과가 뜨게 된다.  
 그럴때를 위해, 출력방법에 따른 속도 비교를 해볼 것 이다.
 ### C++출력 속도 순위 : 
-| 순위 | 출력 방법                                                         | 평균 (초) |
-|------|------------------------------------------------------------------|-----------|
-| 1    | ios_base::sync_with_stdio(false); cout << i << '\n';              | 0.827     |
-| 2    | ios_base::sync_with_stdio(false); cout.tie(NULL); cout << i << '\n'; | 0.8272    |
-| 3    | printf("%d\n",i);                                                | 0.8614    |
-| 5    | cout << i << '\n';                                               | 0.9229    |
-| 6    | s += to_string(i) + '\n';를 이용해 문자열 하나로 만든 다음, 마지막에 cout << s << '\n'; | 1.1507    |
-| 7    | cout << i << endl;                                               | 11.5322   |
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left; /* 기본적으로 왼쪽 정렬 */
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    /* 순위 열과 표 타이틀 가운데 정렬 */
+    th:first-child, td:first-child {
+      text-align: center;
+    }
 
+    /* 표 타이틀(헤더) 가운데 정렬 */
+    th {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>순위</th>
+        <th>출력 방법</th>
+        <th>평균 (초)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>ios_base::sync_with_stdio(false); cout << i << '\n';</td>
+        <td>0.827</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>ios_base::sync_with_stdio(false); cout.tie(NULL); cout << i << '\n';</td>
+        <td>0.8272</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>printf("%d\n", i);</td>
+        <td>0.8614</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>cout << i << '\n';</td>
+        <td>0.9229</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>s += to_string(i) + '\n';를 이용해 문자열 하나로 만든 다음, 마지막에 cout << s << '\n';</td>
+        <td>1.1507</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>cout << i << endl;</td>
+        <td>11.5322</td>
+      </tr>
+    </tbody>
+  </table>
 
+</body>
+</html>
 
 <br> 
 <div style="display: inline-flex; align-items: center; justify-content: center;"> <a style="text-decoration: none; color: black; font-weight: bold;"> 출력 속도 비교 : </a> <a href="https://www.acmicpc.net/blog/view/57" target="_blank" style="display: inline-block; margin-left: 5px; text-decoration: none; font-size: 25px;"> BeakJoon </a> </div> 
